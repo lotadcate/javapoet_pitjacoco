@@ -1,0 +1,6 @@
+Manifest-Version: 1.0
+Built-By: lotad
+Build-Jdk: 17.0.4.1
+Automatic-Module-Name: com.squareup.javapoet
+Created-By: Maven Integration for Eclipse
+

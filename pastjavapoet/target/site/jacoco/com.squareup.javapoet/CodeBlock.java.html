@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CodeBlock.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JavaPoet</a> &gt; <a href="index.source.html" class="el_package">com.squareup.javapoet</a> &gt; <span class="el_source">CodeBlock.java</span></div><h1>CodeBlock.java</h1><pre class="source lang-java linenums">/*
+ * Copyright (C) 2015 Square, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.squareup.javapoet;
+
+import java.io.IOException;
+import java.io.StringWriter;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.List;
+import javax.lang.model.element.Element;
+import javax.lang.model.type.TypeMirror;
+
+import static com.squareup.javapoet.Util.checkArgument;
+
+/**
+ * A fragment of a .java file, potentially containing declarations, statements, and documentation.
+ * Code blocks are not necessarily well-formed Java code, and are not validated. This class assumes
+ * javac will check correctness later!
+ *
+ * &lt;p&gt;Code blocks support placeholders like {@link java.text.Format}. Where {@link String#format}
+ * uses percent {@code %} to reference target values, this class uses dollar sign {@code $} and has
+ * its own set of permitted placeholders:
+ *
+ * &lt;ul&gt;
+ *   &lt;li&gt;{@code $L} emits a &lt;em&gt;literal&lt;/em&gt; value with no escaping. Arguments for literals may be
+ *       strings, primitives, {@linkplain TypeSpec type declarations}, {@linkplain AnnotationSpec
+ *       annotations} and even other code blocks.
+ *   &lt;li&gt;{@code $N} emits a &lt;em&gt;name&lt;/em&gt;, using name collision avoidance where necessary. Arguments
+ *       for names may be strings (actually any {@linkplain CharSequence character sequence}),
+ *       {@linkplain ParameterSpec parameters}, {@linkplain FieldSpec fields}, {@linkplain
+ *       MethodSpec methods}, and {@linkplain TypeSpec types}.
+ *   &lt;li&gt;{@code $S} escapes the value as a &lt;em&gt;string&lt;/em&gt;, wraps it with double quotes, and emits
+ *       that. For example, {@code 6&quot; sandwich} is emitted {@code &quot;6\&quot; sandwich&quot;}.
+ *   &lt;li&gt;{@code $T} emits a &lt;em&gt;type&lt;/em&gt; reference. Types will be imported if possible. Arguments
+ *       for types may be {@linkplain Class classes}, {@linkplain javax.lang.model.type.TypeMirror
+,*       type mirrors}, and {@linkplain javax.lang.model.element.Element elements}.
+ *   &lt;li&gt;{@code $$} emits a dollar sign.
+ *   &lt;li&gt;{@code $&amp;gt;} increases the indentation level.
+ *   &lt;li&gt;{@code $&amp;lt;} decreases the indentation level.
+ *   &lt;li&gt;{@code $[} begins a statement. For multiline statements, every line after the first line
+ *       is double-indented.
+ *   &lt;li&gt;{@code $]} ends a statement.
+ * &lt;/ul&gt;
+ */
+public final class CodeBlock {
+  /** A heterogeneous list containing string literals and value placeholders. */
+  final List&lt;String&gt; formatParts;
+  final List&lt;Object&gt; args;
+
+<span class="fc" id="L63">  private CodeBlock(Builder builder) {</span>
+<span class="fc" id="L64">    this.formatParts = Util.immutableList(builder.formatParts);</span>
+<span class="fc" id="L65">    this.args = Util.immutableList(builder.args);</span>
+<span class="fc" id="L66">  }</span>
+
+  public boolean isEmpty() {
+<span class="fc" id="L69">    return formatParts.isEmpty();</span>
+  }
+
+  @Override public boolean equals(Object o) {
+<span class="pc bpc" id="L73" title="1 of 2 branches missed.">    if (this == o) return true;</span>
+<span class="pc bpc" id="L74" title="1 of 2 branches missed.">    if (o == null) return false;</span>
+<span class="pc bpc" id="L75" title="1 of 2 branches missed.">    if (getClass() != o.getClass()) return false;</span>
+<span class="fc" id="L76">    return toString().equals(o.toString());</span>
+  }
+
+  @Override public int hashCode() {
+<span class="fc" id="L80">    return toString().hashCode();</span>
+  }
+
+  @Override public String toString() {
+<span class="fc" id="L84">    StringWriter out = new StringWriter();</span>
+    try {
+<span class="fc" id="L86">      new CodeWriter(out).emit(this);</span>
+<span class="fc" id="L87">      return out.toString();</span>
+<span class="nc" id="L88">    } catch (IOException e) {</span>
+<span class="nc" id="L89">      throw new AssertionError();</span>
+    }
+  }
+
+  public static CodeBlock of(String format, Object... args) {
+<span class="fc" id="L94">    return new Builder().add(format, args).build();</span>
+  }
+
+  public static Builder builder() {
+<span class="fc" id="L98">    return new Builder();</span>
+  }
+
+  public Builder toBuilder() {
+<span class="nc" id="L102">    Builder builder = new Builder();</span>
+<span class="nc" id="L103">    builder.formatParts.addAll(formatParts);</span>
+<span class="nc" id="L104">    builder.args.addAll(args);</span>
+<span class="nc" id="L105">    return builder;</span>
+  }
+
+  public static final class Builder {
+<span class="fc" id="L109">    final List&lt;String&gt; formatParts = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L110">    final List&lt;Object&gt; args = new ArrayList&lt;&gt;();</span>
+
+<span class="fc" id="L112">    private Builder() {</span>
+<span class="fc" id="L113">    }</span>
+
+    public Builder add(String format, Object... args) {
+<span class="fc" id="L116">      boolean hasRelative = false;</span>
+<span class="fc" id="L117">      boolean hasIndexed = false;</span>
+<span class="fc" id="L118">      int relativeParameterCount = 0;</span>
+<span class="fc" id="L119">      int[] indexedParameterCount = new int[args.length];</span>
+
+<span class="fc bfc" id="L121" title="All 2 branches covered.">      for (int p = 0; p &lt; format.length(); ) {</span>
+<span class="fc bfc" id="L122" title="All 2 branches covered.">        if (format.charAt(p) != '$') {</span>
+<span class="fc" id="L123">          int nextP = format.indexOf('$', p + 1);</span>
+<span class="fc bfc" id="L124" title="All 2 branches covered.">          if (nextP == -1) nextP = format.length();</span>
+<span class="fc" id="L125">          formatParts.add(format.substring(p, nextP));</span>
+<span class="fc" id="L126">          p = nextP;</span>
+<span class="fc" id="L127">          continue;</span>
+        }
+
+<span class="fc" id="L130">        p++; // '$'.</span>
+
+        // Consume zero or more digits, leaving 'c' as the first non-digit char after the '$'.
+<span class="fc" id="L133">        int indexStart = p;</span>
+        char c;
+        do {
+<span class="fc bfc" id="L136" title="All 2 branches covered.">          checkArgument(p &lt; format.length(), &quot;dangling format characters in '%s'&quot;, format);</span>
+<span class="fc" id="L137">          c = format.charAt(p++);</span>
+<span class="fc bfc" id="L138" title="All 4 branches covered.">        } while (c &gt;= '0' &amp;&amp; c &lt;= '9');</span>
+<span class="fc" id="L139">        int indexEnd = p - 1;</span>
+
+        // If 'c' doesn't take an argument, we're done.
+<span class="fc bfc" id="L142" title="All 10 branches covered.">        if (c == '$' || c == '&gt;' || c == '&lt;' || c == '[' || c == ']') {</span>
+<span class="fc bfc" id="L143" title="All 2 branches covered.">          checkArgument(indexStart == indexEnd, &quot;$$, $&gt;, $&lt;, $[ and $] may not have an index&quot;);</span>
+<span class="fc" id="L144">          formatParts.add(&quot;$&quot; + c);</span>
+<span class="fc" id="L145">          continue;</span>
+        }
+
+        // Find either the indexed argument, or the relative argument. (0-based).
+        int index;
+<span class="fc bfc" id="L150" title="All 2 branches covered.">        if (indexStart &lt; indexEnd) {</span>
+<span class="fc" id="L151">          index = Integer.parseInt(format.substring(indexStart, indexEnd)) - 1;</span>
+<span class="fc" id="L152">          hasIndexed = true;</span>
+<span class="fc" id="L153">          indexedParameterCount[index % args.length]++; // modulo is needed, checked below anyway</span>
+        } else {
+<span class="fc" id="L155">          index = relativeParameterCount;</span>
+<span class="fc" id="L156">          hasRelative = true;</span>
+<span class="fc" id="L157">          relativeParameterCount++;</span>
+        }
+
+<span class="fc bfc" id="L160" title="All 4 branches covered.">        checkArgument(index &gt;= 0 &amp;&amp; index &lt; args.length,</span>
+            &quot;index %d for '%s' not in range (received %s arguments)&quot;,
+<span class="fc" id="L162">            index + 1, format.substring(indexStart - 1, indexEnd + 1), args.length);</span>
+<span class="pc bpc" id="L163" title="1 of 4 branches missed.">        checkArgument(!hasIndexed || !hasRelative, &quot;cannot mix indexed and positional parameters&quot;);</span>
+
+<span class="fc bfc" id="L165" title="All 5 branches covered.">        switch (c) {</span>
+          case 'N':
+<span class="fc" id="L167">            this.args.add(argToName(args[index]));</span>
+<span class="fc" id="L168">            break;</span>
+          case 'L':
+<span class="fc" id="L170">            this.args.add(argToLiteral(args[index]));</span>
+<span class="fc" id="L171">            break;</span>
+          case 'S':
+<span class="fc" id="L173">            this.args.add(argToString(args[index]));</span>
+<span class="fc" id="L174">            break;</span>
+          case 'T':
+<span class="fc" id="L176">            this.args.add(argToType(args[index]));</span>
+<span class="fc" id="L177">            break;</span>
+          default:
+<span class="fc" id="L179">            throw new IllegalArgumentException(</span>
+<span class="fc" id="L180">                String.format(&quot;invalid format string: '%s'&quot;, format));</span>
+        }
+
+<span class="fc" id="L183">        formatParts.add(&quot;$&quot; + c);</span>
+<span class="fc" id="L184">      }</span>
+
+<span class="fc bfc" id="L186" title="All 2 branches covered.">      if (hasRelative) {</span>
+<span class="fc bfc" id="L187" title="All 2 branches covered.">        checkArgument(relativeParameterCount &gt;= args.length,</span>
+<span class="fc" id="L188">            &quot;unused arguments: expected %s, received %s&quot;, relativeParameterCount, args.length);</span>
+      }
+<span class="fc bfc" id="L190" title="All 2 branches covered.">      if (hasIndexed) {</span>
+<span class="fc" id="L191">        List&lt;String&gt; unused = new ArrayList&lt;&gt;();</span>
+<span class="fc bfc" id="L192" title="All 2 branches covered.">        for (int i = 0; i &lt; args.length; i++) {</span>
+<span class="fc bfc" id="L193" title="All 2 branches covered.">          if (indexedParameterCount[i] == 0) {</span>
+<span class="fc" id="L194">            unused.add(&quot;$&quot; + (i + 1));</span>
+          }
+        }
+<span class="fc bfc" id="L197" title="All 2 branches covered.">        String s = unused.size() == 1 ? &quot;&quot; : &quot;s&quot;;</span>
+<span class="fc" id="L198">        checkArgument(unused.isEmpty(), &quot;unused argument%s: %s&quot;, s, Util.join(&quot;, &quot;, unused));</span>
+      }
+<span class="fc" id="L200">      return this;</span>
+    }
+
+    private String argToName(Object o) {
+<span class="fc bfc" id="L204" title="All 2 branches covered.">      if (o instanceof CharSequence) return o.toString();</span>
+<span class="fc bfc" id="L205" title="All 2 branches covered.">      if (o instanceof ParameterSpec) return ((ParameterSpec) o).name;</span>
+<span class="fc bfc" id="L206" title="All 2 branches covered.">      if (o instanceof FieldSpec) return ((FieldSpec) o).name;</span>
+<span class="fc bfc" id="L207" title="All 2 branches covered.">      if (o instanceof MethodSpec) return ((MethodSpec) o).name;</span>
+<span class="fc bfc" id="L208" title="All 2 branches covered.">      if (o instanceof TypeSpec) return ((TypeSpec) o).name;</span>
+<span class="fc" id="L209">      throw new IllegalArgumentException(&quot;expected name but was &quot; + o);</span>
+    }
+
+    private Object argToLiteral(Object o) {
+<span class="fc" id="L213">      return o;</span>
+    }
+
+    private String argToString(Object o) {
+<span class="fc bfc" id="L217" title="All 2 branches covered.">      return o != null ? String.valueOf(o) : null;</span>
+    }
+
+    private TypeName argToType(Object o) {
+<span class="fc bfc" id="L221" title="All 2 branches covered.">      if (o instanceof TypeName) return (TypeName) o;</span>
+<span class="fc bfc" id="L222" title="All 2 branches covered.">      if (o instanceof TypeMirror) return TypeName.get((TypeMirror) o);</span>
+<span class="fc bfc" id="L223" title="All 2 branches covered.">      if (o instanceof Element) return TypeName.get(((Element) o).asType());</span>
+<span class="fc bfc" id="L224" title="All 2 branches covered.">      if (o instanceof Type) return TypeName.get((Type) o);</span>
+<span class="fc" id="L225">      throw new IllegalArgumentException(&quot;expected type but was &quot; + o);</span>
+    }
+
+    /**
+     * @param controlFlow the control flow construct and its code, such as &quot;if (foo == 5)&quot;.
+     * Shouldn't contain braces or newline characters.
+     */
+    public Builder beginControlFlow(String controlFlow, Object... args) {
+<span class="fc" id="L233">      add(controlFlow + &quot; {\n&quot;, args);</span>
+<span class="fc" id="L234">      indent();</span>
+<span class="fc" id="L235">      return this;</span>
+    }
+
+    /**
+     * @param controlFlow the control flow construct and its code, such as &quot;else if (foo == 10)&quot;.
+     *     Shouldn't contain braces or newline characters.
+     */
+    public Builder nextControlFlow(String controlFlow, Object... args) {
+<span class="fc" id="L243">      unindent();</span>
+<span class="fc" id="L244">      add(&quot;} &quot; + controlFlow + &quot; {\n&quot;, args);</span>
+<span class="fc" id="L245">      indent();</span>
+<span class="fc" id="L246">      return this;</span>
+    }
+
+    public Builder endControlFlow() {
+<span class="fc" id="L250">      unindent();</span>
+<span class="fc" id="L251">      add(&quot;}\n&quot;);</span>
+<span class="fc" id="L252">      return this;</span>
+    }
+
+    /**
+     * @param controlFlow the optional control flow construct and its code, such as
+     *     &quot;while(foo == 20)&quot;. Only used for &quot;do/while&quot; control flows.
+     */
+    public Builder endControlFlow(String controlFlow, Object... args) {
+<span class="fc" id="L260">      unindent();</span>
+<span class="fc" id="L261">      add(&quot;} &quot; + controlFlow + &quot;;\n&quot;, args);</span>
+<span class="fc" id="L262">      return this;</span>
+    }
+
+    public Builder addStatement(String format, Object... args) {
+<span class="fc" id="L266">      add(&quot;$[&quot;);</span>
+<span class="fc" id="L267">      add(format, args);</span>
+<span class="fc" id="L268">      add(&quot;;\n$]&quot;);</span>
+<span class="fc" id="L269">      return this;</span>
+    }
+
+    public Builder add(CodeBlock codeBlock) {
+<span class="fc" id="L273">      formatParts.addAll(codeBlock.formatParts);</span>
+<span class="fc" id="L274">      args.addAll(codeBlock.args);</span>
+<span class="fc" id="L275">      return this;</span>
+    }
+
+    public Builder indent() {
+<span class="fc" id="L279">      this.formatParts.add(&quot;$&gt;&quot;);</span>
+<span class="fc" id="L280">      return this;</span>
+    }
+
+    public Builder unindent() {
+<span class="fc" id="L284">      this.formatParts.add(&quot;$&lt;&quot;);</span>
+<span class="fc" id="L285">      return this;</span>
+    }
+
+    public CodeBlock build() {
+<span class="fc" id="L289">      return new CodeBlock(this);</span>
+    }
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

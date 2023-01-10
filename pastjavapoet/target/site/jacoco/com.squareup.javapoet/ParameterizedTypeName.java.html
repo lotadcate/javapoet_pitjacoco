@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ParameterizedTypeName.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JavaPoet</a> &gt; <a href="index.source.html" class="el_package">com.squareup.javapoet</a> &gt; <span class="el_source">ParameterizedTypeName.java</span></div><h1>ParameterizedTypeName.java</h1><pre class="source lang-java linenums">/*
+ * Copyright (C) 2015 Square, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.squareup.javapoet;
+
+import java.io.IOException;
+import java.lang.reflect.ParameterizedType;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.LinkedHashMap;
+import java.util.List;
+import java.util.Map;
+
+import static com.squareup.javapoet.Util.checkArgument;
+import static com.squareup.javapoet.Util.checkNotNull;
+
+public final class ParameterizedTypeName extends TypeName {
+  public final ClassName rawType;
+  public final List&lt;TypeName&gt; typeArguments;
+
+  ParameterizedTypeName(ClassName rawType, List&lt;TypeName&gt; typeArguments) {
+<span class="fc" id="L35">    this(rawType, typeArguments, new ArrayList&lt;AnnotationSpec&gt;());</span>
+<span class="fc" id="L36">  }</span>
+
+  ParameterizedTypeName(ClassName rawType, List&lt;TypeName&gt; typeArguments,
+      List&lt;AnnotationSpec&gt; annotations) {
+<span class="fc" id="L40">    super(annotations);</span>
+<span class="fc" id="L41">    this.rawType = checkNotNull(rawType, &quot;rawType == null&quot;);</span>
+<span class="fc" id="L42">    this.typeArguments = Util.immutableList(typeArguments);</span>
+
+<span class="pc bpc" id="L44" title="1 of 2 branches missed.">    checkArgument(!this.typeArguments.isEmpty(), &quot;no type arguments: %s&quot;, rawType);</span>
+<span class="fc bfc" id="L45" title="All 2 branches covered.">    for (TypeName typeArgument : this.typeArguments) {</span>
+<span class="pc bpc" id="L46" title="2 of 4 branches missed.">      checkArgument(!typeArgument.isPrimitive() &amp;&amp; typeArgument != VOID,</span>
+          &quot;invalid type parameter: %s&quot;, typeArgument);
+<span class="fc" id="L48">    }</span>
+<span class="fc" id="L49">  }</span>
+
+  @Override public ParameterizedTypeName annotated(List&lt;AnnotationSpec&gt; annotations) {
+<span class="fc" id="L52">    return new ParameterizedTypeName(rawType, typeArguments, concatAnnotations(annotations));</span>
+  }
+
+  @Override public TypeName withoutAnnotations() {
+<span class="nc" id="L56">    return new ParameterizedTypeName(rawType, typeArguments);</span>
+  }
+
+  @Override CodeWriter emit(CodeWriter out) throws IOException {
+<span class="fc" id="L60">    rawType.emitAnnotations(out);</span>
+<span class="fc" id="L61">    rawType.emit(out);</span>
+<span class="fc" id="L62">    out.emitAndIndent(&quot;&lt;&quot;);</span>
+<span class="fc" id="L63">    boolean firstParameter = true;</span>
+<span class="fc bfc" id="L64" title="All 2 branches covered.">    for (TypeName parameter : typeArguments) {</span>
+<span class="fc bfc" id="L65" title="All 2 branches covered.">      if (!firstParameter) out.emitAndIndent(&quot;, &quot;);</span>
+<span class="fc" id="L66">      parameter.emitAnnotations(out);</span>
+<span class="fc" id="L67">      parameter.emit(out);</span>
+<span class="fc" id="L68">      firstParameter = false;</span>
+<span class="fc" id="L69">    }</span>
+<span class="fc" id="L70">    return out.emitAndIndent(&quot;&gt;&quot;);</span>
+  }
+
+  /** Returns a parameterized type, applying {@code typeArguments} to {@code rawType}. */
+  public static ParameterizedTypeName get(ClassName rawType, TypeName... typeArguments) {
+<span class="fc" id="L75">    return new ParameterizedTypeName(rawType, Arrays.asList(typeArguments));</span>
+  }
+
+  /** Returns a parameterized type, applying {@code typeArguments} to {@code rawType}. */
+  public static ParameterizedTypeName get(Class&lt;?&gt; rawType, Type... typeArguments) {
+<span class="fc" id="L80">    return new ParameterizedTypeName(ClassName.get(rawType), list(typeArguments));</span>
+  }
+
+  /** Returns a parameterized type equivalent to {@code type}. */
+  public static ParameterizedTypeName get(ParameterizedType type) {
+<span class="nc" id="L85">    return get(type, new LinkedHashMap&lt;Type, TypeVariableName&gt;());</span>
+  }
+
+  /** Returns a parameterized type equivalent to {@code type}. */
+  static ParameterizedTypeName get(ParameterizedType type, Map&lt;Type, TypeVariableName&gt; map) {
+<span class="fc" id="L90">    return new ParameterizedTypeName(ClassName.get((Class&lt;?&gt;) type.getRawType()),</span>
+<span class="fc" id="L91">        TypeName.list(type.getActualTypeArguments(), map));</span>
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>

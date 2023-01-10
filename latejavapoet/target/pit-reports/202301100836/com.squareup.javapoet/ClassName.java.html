@@ -1,0 +1,5314 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+
+
+<h1>ClassName.java</h1>
+
+<table class="src">
+
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_1'/>
+1
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_1'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/*</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_2'/>
+2
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_2'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Copyright (C) 2014 Google, Inc.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_3'/>
+3
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_3'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_4'/>
+4
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_4'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Licensed under the Apache License, Version 2.0 (the &#34;License&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_5'/>
+5
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_5'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * you may not use this file except in compliance with the License.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_6'/>
+6
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_6'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * You may obtain a copy of the License at</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_7'/>
+7
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_7'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_8'/>
+8
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_8'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * http://www.apache.org/licenses/LICENSE-2.0</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_9'/>
+9
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_9'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> *</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_10'/>
+10
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_10'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * Unless required by applicable law or agreed to in writing, software</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_11'/>
+11
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_11'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * distributed under the License is distributed on an &#34;AS IS&#34; BASIS,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_12'/>
+12
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_12'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_13'/>
+13
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_13'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * See the License for the specific language governing permissions and</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_14'/>
+14
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_14'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> * limitations under the License.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_15'/>
+15
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_15'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''> */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_16'/>
+16
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_16'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>package com.squareup.javapoet;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_17'/>
+17
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_17'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_18'/>
+18
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_18'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.io.IOException;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_19'/>
+19
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_19'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.ArrayList;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_20'/>
+20
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_20'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Collections;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_21'/>
+21
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_21'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.List;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_22'/>
+22
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_22'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Map;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_23'/>
+23
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_23'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import java.util.Objects;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_24'/>
+24
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_24'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.lang.model.element.Element;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_25'/>
+25
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_25'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.lang.model.element.PackageElement;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_26'/>
+26
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_26'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.lang.model.element.TypeElement;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_27'/>
+27
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_27'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import javax.lang.model.util.SimpleElementVisitor8;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_28'/>
+28
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_28'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_29'/>
+29
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_29'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import static com.squareup.javapoet.Util.checkArgument;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_30'/>
+30
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_30'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>import static com.squareup.javapoet.Util.checkNotNull;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_31'/>
+31
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_31'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_32'/>
+32
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_32'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>/** A fully-qualified class name for top-level and member classes. */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_33'/>
+33
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_33'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>public final class ClassName extends TypeName implements Comparable&#60;ClassName&#62; {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_34'/>
+34
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_34'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  public static final ClassName OBJECT = ClassName.get(Object.class);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_35'/>
+35
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_35'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_36'/>
+36
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_36'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /** The name representing the default Java package. */</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_37'/>
+37
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_37'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  private static final String NO_PACKAGE = &#34;&#34;;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_38'/>
+38
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_38'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_39'/>
+39
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_39'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /** The package name of this class, or &#34;&#34; if this is in the default package. */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_40'/>
+40
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_40'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  final String packageName;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_41'/>
+41
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_41'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_42'/>
+42
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_42'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /** The enclosing class, or null if this is not enclosed in another class. */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_43'/>
+43
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_43'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  final ClassName enclosingClassName;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_44'/>
+44
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_44'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_45'/>
+45
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_45'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /** This class name, like &#34;Entry&#34; for java.util.Map.Entry. */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_46'/>
+46
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_46'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  final String simpleName;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_47'/>
+47
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_47'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_48'/>
+48
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_48'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private List&#60;String&#62; simpleNames;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_49'/>
+49
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_49'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_50'/>
+50
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_50'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /** The full class name like &#34;java.util.Map.Entry&#34;. */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_51'/>
+51
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_51'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  final String canonicalName;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_52'/>
+52
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_52'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_53'/>
+53
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_53'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  private ClassName(String packageName, ClassName enclosingClassName, String simpleName) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_54'/>
+54
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_54'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this(packageName, enclosingClassName, simpleName, Collections.emptyList());</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_55'/>
+55
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_55'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_56'/>
+56
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_56'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_57'/>
+57
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_57'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private ClassName(String packageName, ClassName enclosingClassName, String simpleName,</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_58'/>
+58
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_58'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      List&#60;AnnotationSpec&#62; annotations) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_59'/>
+59
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_59'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    super(annotations);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_60'/>
+60
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_60'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this.packageName = Objects.requireNonNull(packageName, &#34;packageName == null&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_61'/>
+61
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_61'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this.enclosingClassName = enclosingClassName;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_62'/>
+62
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_62'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    this.simpleName = simpleName;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_63'/>
+63
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_63'>1</a>
+<span>
+
+1. <init> : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    this.canonicalName = enclosingClassName != null</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_64'/>
+64
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_64'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        ? (enclosingClassName.canonicalName + &#39;.&#39; + simpleName)</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_65'/>
+65
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_65'>1</a>
+<span>
+
+1. <init> : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        : (packageName.isEmpty() ? simpleName : packageName + &#39;.&#39; + simpleName);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_66'/>
+66
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_66'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_67'/>
+67
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_67'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_68'/>
+68
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_68'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override public ClassName annotated(List&#60;AnnotationSpec&#62; annotations) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_69'/>
+69
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_69'>1</a>
+<span>
+
+1. annotated : mutated return of Object value for com/squareup/javapoet/ClassName::annotated to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return new ClassName(packageName, enclosingClassName, simpleName,</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_70'/>
+70
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_70'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        concatAnnotations(annotations));</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_71'/>
+71
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_71'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_72'/>
+72
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_72'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_73'/>
+73
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_73'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override public ClassName withoutAnnotations() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_74'/>
+74
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_74'>2</a>
+<span>
+
+1. withoutAnnotations : negated conditional &rarr; KILLED<br/>
+
+2. withoutAnnotations : mutated return of Object value for com/squareup/javapoet/ClassName::withoutAnnotations to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (!isAnnotated()) return this;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_75'/>
+75
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_75'>1</a>
+<span>
+
+1. withoutAnnotations : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    ClassName resultEnclosingClassName = enclosingClassName != null</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_76'/>
+76
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_76'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        ? enclosingClassName.withoutAnnotations()</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_77'/>
+77
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_77'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        : null;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_78'/>
+78
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_78'>1</a>
+<span>
+
+1. withoutAnnotations : mutated return of Object value for com/squareup/javapoet/ClassName::withoutAnnotations to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return new ClassName(packageName, resultEnclosingClassName, simpleName);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_79'/>
+79
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_79'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_80'/>
+80
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_80'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_81'/>
+81
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_81'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override public boolean isAnnotated() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_82'/>
+82
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_82'>5</a>
+<span>
+
+1. isAnnotated : negated conditional &rarr; KILLED<br/>
+
+2. isAnnotated : negated conditional &rarr; KILLED<br/>
+
+3. isAnnotated : negated conditional &rarr; KILLED<br/>
+
+4. isAnnotated : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+5. isAnnotated : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return super.isAnnotated() || (enclosingClassName != null &#38;&#38; enclosingClassName.isAnnotated());</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_83'/>
+83
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_83'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_84'/>
+84
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_84'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_85'/>
+85
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_85'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_86'/>
+86
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_86'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * Returns the package name, like {@code &#34;java.util&#34;} for {@code Map.Entry}. Returns the empty</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_87'/>
+87
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_87'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * string for the default package.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_88'/>
+88
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_88'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_89'/>
+89
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_89'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public String packageName() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_90'/>
+90
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_90'>1</a>
+<span>
+
+1. packageName : mutated return of Object value for com/squareup/javapoet/ClassName::packageName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return packageName;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_91'/>
+91
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_91'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_92'/>
+92
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_92'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_93'/>
+93
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_93'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_94'/>
+94
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_94'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * Returns the enclosing class, like {@link Map} for {@code Map.Entry}. Returns null if this class</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_95'/>
+95
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_95'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * is not nested in another class.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_96'/>
+96
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_96'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_97'/>
+97
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_97'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public ClassName enclosingClassName() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_98'/>
+98
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_98'>1</a>
+<span>
+
+1. enclosingClassName : mutated return of Object value for com/squareup/javapoet/ClassName::enclosingClassName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return enclosingClassName;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_99'/>
+99
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_99'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_100'/>
+100
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_100'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_101'/>
+101
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_101'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_102'/>
+102
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_102'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * Returns the top class in this nesting group. Equivalent to chained calls to {@link</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_103'/>
+103
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_103'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * #enclosingClassName()} until the result&#39;s enclosing class is null.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_104'/>
+104
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_104'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_105'/>
+105
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_105'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public ClassName topLevelClassName() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_106'/>
+106
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_106'>2</a>
+<span>
+
+1. topLevelClassName : negated conditional &rarr; KILLED<br/>
+
+2. topLevelClassName : mutated return of Object value for com/squareup/javapoet/ClassName::topLevelClassName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return enclosingClassName != null ? enclosingClassName.topLevelClassName() : this;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_107'/>
+107
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_107'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_108'/>
+108
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_108'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_109'/>
+109
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_109'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /** Return the binary name of a class. */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_110'/>
+110
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_110'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public String reflectionName() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_111'/>
+111
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_111'>2</a>
+<span>
+
+1. reflectionName : negated conditional &rarr; KILLED<br/>
+
+2. reflectionName : mutated return of Object value for com/squareup/javapoet/ClassName::reflectionName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return enclosingClassName != null</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_112'/>
+112
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_112'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        ? (enclosingClassName.reflectionName() + &#39;$&#39; + simpleName)</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_113'/>
+113
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_113'>1</a>
+<span>
+
+1. reflectionName : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        : (packageName.isEmpty() ? simpleName : packageName + &#39;.&#39; + simpleName);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_114'/>
+114
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_114'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_115'/>
+115
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_115'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_116'/>
+116
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_116'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public List&#60;String&#62; simpleNames() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_117'/>
+117
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_117'>1</a>
+<span>
+
+1. simpleNames : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (simpleNames != null) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_118'/>
+118
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_118'>1</a>
+<span>
+
+1. simpleNames : mutated return of Object value for com/squareup/javapoet/ClassName::simpleNames to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return simpleNames;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_119'/>
+119
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_119'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_120'/>
+120
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_120'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_121'/>
+121
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_121'>1</a>
+<span>
+
+1. simpleNames : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (enclosingClassName == null) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_122'/>
+122
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_122'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      simpleNames = Collections.singletonList(simpleName);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_123'/>
+123
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_123'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    } else {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_124'/>
+124
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_124'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      List&#60;String&#62; mutableNames = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_125'/>
+125
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_125'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      mutableNames.addAll(enclosingClassName().simpleNames());</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_126'/>
+126
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_126'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      mutableNames.add(simpleName);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_127'/>
+127
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_127'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      simpleNames = Collections.unmodifiableList(mutableNames);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_128'/>
+128
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_128'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_129'/>
+129
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_129'>1</a>
+<span>
+
+1. simpleNames : mutated return of Object value for com/squareup/javapoet/ClassName::simpleNames to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return simpleNames;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_130'/>
+130
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_130'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_131'/>
+131
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_131'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_132'/>
+132
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_132'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_133'/>
+133
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_133'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * Returns a class that shares the same enclosing package or class. If this class is enclosed by</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_134'/>
+134
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_134'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * another class, this is equivalent to {@code enclosingClassName().nestedClass(name)}. Otherwise</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_135'/>
+135
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_135'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * it is equivalent to {@code get(packageName(), name)}.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_136'/>
+136
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_136'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_137'/>
+137
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_137'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public ClassName peerClass(String name) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_138'/>
+138
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_138'>1</a>
+<span>
+
+1. peerClass : mutated return of Object value for com/squareup/javapoet/ClassName::peerClass to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return new ClassName(packageName, enclosingClassName, name);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_139'/>
+139
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_139'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_140'/>
+140
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_140'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_141'/>
+141
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_141'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_142'/>
+142
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_142'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * Returns a new {@link ClassName} instance for the specified {@code name} as nested inside this</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_143'/>
+143
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_143'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * class.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_144'/>
+144
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_144'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_145'/>
+145
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_145'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public ClassName nestedClass(String name) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_146'/>
+146
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_146'>1</a>
+<span>
+
+1. nestedClass : mutated return of Object value for com/squareup/javapoet/ClassName::nestedClass to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return new ClassName(packageName, this, name);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_147'/>
+147
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_147'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_148'/>
+148
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_148'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_149'/>
+149
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_149'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /** Returns the simple name of this class, like {@code &#34;Entry&#34;} for {@link Map.Entry}. */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_150'/>
+150
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_150'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public String simpleName() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_151'/>
+151
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_151'>1</a>
+<span>
+
+1. simpleName : mutated return of Object value for com/squareup/javapoet/ClassName::simpleName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return simpleName;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_152'/>
+152
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_152'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_153'/>
+153
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_153'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_154'/>
+154
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_154'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_155'/>
+155
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_155'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * Returns the full class name of this class.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_156'/>
+156
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_156'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * Like {@code &#34;java.util.Map.Entry&#34;} for {@link Map.Entry}.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_157'/>
+157
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_157'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_158'/>
+158
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_158'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public String canonicalName() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_159'/>
+159
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_159'>1</a>
+<span>
+
+1. canonicalName : mutated return of Object value for com/squareup/javapoet/ClassName::canonicalName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return canonicalName;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_160'/>
+160
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_160'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_161'/>
+161
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_161'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_162'/>
+162
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_162'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public static ClassName get(Class&#60;?&#62; clazz) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_163'/>
+163
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_163'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    checkNotNull(clazz, &#34;clazz == null&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_164'/>
+164
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_164'>2</a>
+<span>
+
+1. get : negated conditional &rarr; KILLED<br/>
+
+2. get : removed call to com/squareup/javapoet/Util::checkArgument &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    checkArgument(!clazz.isPrimitive(), &#34;primitive types cannot be represented as a ClassName&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_165'/>
+165
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_165'>2</a>
+<span>
+
+1. get : removed call to com/squareup/javapoet/Util::checkArgument &rarr; SURVIVED<br/>
+
+2. get : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    checkArgument(!void.class.equals(clazz), &#34;&#39;void&#39; type cannot be represented as a ClassName&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_166'/>
+166
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_166'>2</a>
+<span>
+
+1. get : negated conditional &rarr; KILLED<br/>
+
+2. get : removed call to com/squareup/javapoet/Util::checkArgument &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    checkArgument(!clazz.isArray(), &#34;array types cannot be represented as a ClassName&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_167'/>
+167
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_167'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_168'/>
+168
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_168'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    String anonymousSuffix = &#34;&#34;;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_169'/>
+169
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_169'>1</a>
+<span>
+
+1. get : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    while (clazz.isAnonymousClass()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_170'/>
+170
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_170'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      int lastDollar = clazz.getName().lastIndexOf(&#39;$&#39;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_171'/>
+171
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_171'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      anonymousSuffix = clazz.getName().substring(lastDollar) + anonymousSuffix;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_172'/>
+172
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_172'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      clazz = clazz.getEnclosingClass();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_173'/>
+173
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_173'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_174'/>
+174
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_174'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    String name = clazz.getSimpleName() + anonymousSuffix;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_175'/>
+175
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_175'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_176'/>
+176
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_176'>1</a>
+<span>
+
+1. get : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    if (clazz.getEnclosingClass() == null) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_177'/>
+177
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_177'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      // Avoid unreliable Class.getPackage(). https://github.com/square/javapoet/issues/295</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_178'/>
+178
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_178'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      int lastDot = clazz.getName().lastIndexOf(&#39;.&#39;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_179'/>
+179
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_179'>1</a>
+<span>
+
+1. get : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      String packageName = (lastDot != -1) ? clazz.getName().substring(0, lastDot) : NO_PACKAGE;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_180'/>
+180
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_180'>1</a>
+<span>
+
+1. get : mutated return of Object value for com/squareup/javapoet/ClassName::get to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      return new ClassName(packageName, null, name);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_181'/>
+181
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_181'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_182'/>
+182
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_182'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_183'/>
+183
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_183'>1</a>
+<span>
+
+1. get : mutated return of Object value for com/squareup/javapoet/ClassName::get to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return ClassName.get(clazz.getEnclosingClass()).nestedClass(name);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_184'/>
+184
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_184'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_185'/>
+185
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_185'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_186'/>
+186
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_186'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_187'/>
+187
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_187'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * Returns a new {@link ClassName} instance for the given fully-qualified class name string. This</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_188'/>
+188
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_188'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * method assumes that the input is ASCII and follows typical Java style (lowercase package</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_189'/>
+189
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_189'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * names, UpperCamelCase class names) and may produce incorrect results or throw</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_190'/>
+190
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_190'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * {@link IllegalArgumentException} otherwise. For that reason, {@link #get(Class)} and</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_191'/>
+191
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_191'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * {@link #get(Class)} should be preferred as they can correctly create {@link ClassName}</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_192'/>
+192
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_192'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * instances without such restrictions.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_193'/>
+193
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_193'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_194'/>
+194
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_194'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public static ClassName bestGuess(String classNameString) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_195'/>
+195
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_195'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    // Add the package name, like &#34;java.util.concurrent&#34;, or &#34;&#34; for no package.</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_196'/>
+196
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_196'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    int p = 0;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_197'/>
+197
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_197'>3</a>
+<span>
+
+1. bestGuess : changed conditional boundary &rarr; KILLED<br/>
+
+2. bestGuess : negated conditional &rarr; KILLED<br/>
+
+3. bestGuess : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    while (p &#60; classNameString.length() &#38;&#38; Character.isLowerCase(classNameString.codePointAt(p))) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_198'/>
+198
+</td>
+<td class='uncertain'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_198'>1</a>
+<span>
+
+1. bestGuess : Replaced integer addition with subtraction &rarr; TIMED_OUT<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='uncertain'>      p = classNameString.indexOf(&#39;.&#39;, p) + 1;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_199'/>
+199
+</td>
+<td class='uncertain'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_199'>2</a>
+<span>
+
+1. bestGuess : removed call to com/squareup/javapoet/Util::checkArgument &rarr; TIMED_OUT<br/>
+
+2. bestGuess : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='uncertain'>      checkArgument(p != 0, &#34;couldn&#39;t make a guess for %s&#34;, classNameString);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_200'/>
+200
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_200'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_201'/>
+201
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_201'>2</a>
+<span>
+
+1. bestGuess : Replaced integer subtraction with addition &rarr; KILLED<br/>
+
+2. bestGuess : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    String packageName = p == 0 ? NO_PACKAGE : classNameString.substring(0, p - 1);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_202'/>
+202
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_202'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_203'/>
+203
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_203'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    // Add class names like &#34;Map&#34; and &#34;Entry&#34;.</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_204'/>
+204
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_204'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    ClassName className = null;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_205'/>
+205
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_205'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    for (String simpleName : classNameString.substring(p).split(&#34;\\.&#34;, -1)) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_206'/>
+206
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_206'>3</a>
+<span>
+
+1. bestGuess : negated conditional &rarr; KILLED<br/>
+
+2. bestGuess : negated conditional &rarr; KILLED<br/>
+
+3. bestGuess : removed call to com/squareup/javapoet/Util::checkArgument &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      checkArgument(!simpleName.isEmpty() &#38;&#38; Character.isUpperCase(simpleName.codePointAt(0)),</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_207'/>
+207
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_207'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>          &#34;couldn&#39;t make a guess for %s&#34;, classNameString);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_208'/>
+208
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_208'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      className = new ClassName(packageName, className, simpleName);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_209'/>
+209
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_209'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_210'/>
+210
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_210'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_211'/>
+211
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_211'>1</a>
+<span>
+
+1. bestGuess : mutated return of Object value for com/squareup/javapoet/ClassName::bestGuess to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return className;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_212'/>
+212
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_212'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_213'/>
+213
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_213'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_214'/>
+214
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_214'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /**</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_215'/>
+215
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_215'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * Returns a class name created from the given parts. For example, calling this with package name</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_216'/>
+216
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_216'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   * {@code &#34;java.util&#34;} and simple names {@code &#34;Map&#34;}, {@code &#34;Entry&#34;} yields {@link Map.Entry}.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_217'/>
+217
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_217'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>   */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_218'/>
+218
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_218'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public static ClassName get(String packageName, String simpleName, String... simpleNames) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_219'/>
+219
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_219'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    ClassName className = new ClassName(packageName, null, simpleName);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_220'/>
+220
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_220'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    for (String name : simpleNames) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_221'/>
+221
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_221'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      className = className.nestedClass(name);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_222'/>
+222
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_222'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_223'/>
+223
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_223'>1</a>
+<span>
+
+1. get : mutated return of Object value for com/squareup/javapoet/ClassName::get to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return className;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_224'/>
+224
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_224'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_225'/>
+225
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_225'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_226'/>
+226
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_226'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /** Returns the class name for {@code element}. */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_227'/>
+227
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_227'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  public static ClassName get(TypeElement element) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_228'/>
+228
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_228'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    checkNotNull(element, &#34;element == null&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_229'/>
+229
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_229'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    String simpleName = element.getSimpleName().toString();</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_230'/>
+230
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_230'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_231'/>
+231
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_231'>1</a>
+<span>
+
+1. get : mutated return of Object value for com/squareup/javapoet/ClassName::get to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return element.getEnclosingElement().accept(new SimpleElementVisitor8&#60;ClassName, Void&#62;() {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_232'/>
+232
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_232'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      @Override public ClassName visitPackage(PackageElement packageElement, Void p) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_233'/>
+233
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_233'>1</a>
+<span>
+
+1. visitPackage : mutated return of Object value for com/squareup/javapoet/ClassName$1::visitPackage to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return new ClassName(packageElement.getQualifiedName().toString(), null, simpleName);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_234'/>
+234
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_234'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_235'/>
+235
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_235'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_236'/>
+236
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_236'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      @Override public ClassName visitType(TypeElement enclosingClass, Void p) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_237'/>
+237
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_237'>1</a>
+<span>
+
+1. visitType : mutated return of Object value for com/squareup/javapoet/ClassName$1::visitType to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return ClassName.get(enclosingClass).nestedClass(simpleName);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_238'/>
+238
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_238'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_239'/>
+239
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_239'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_240'/>
+240
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_240'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      @Override public ClassName visitUnknown(Element unknown, Void p) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_241'/>
+241
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_241'>1</a>
+<span>
+
+1. visitUnknown : mutated return of Object value for com/squareup/javapoet/ClassName$1::visitUnknown to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        return get(&#34;&#34;, simpleName);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_242'/>
+242
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_242'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_243'/>
+243
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_243'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_244'/>
+244
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_244'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      @Override public ClassName defaultAction(Element enclosingElement, Void p) {</span></pre></td></tr>
+
+
+<tr>
+<td class='uncovered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_245'/>
+245
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_245'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='uncovered'><pre><span  class=''>        throw new IllegalArgumentException(&#34;Unexpected type nesting: &#34; + element);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_246'/>
+246
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_246'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_247'/>
+247
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_247'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    }, null);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_248'/>
+248
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_248'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_249'/>
+249
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_249'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_250'/>
+250
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_250'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override public int compareTo(ClassName o) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_251'/>
+251
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_251'>1</a>
+<span>
+
+1. compareTo : replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return canonicalName.compareTo(o.canonicalName);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_252'/>
+252
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_252'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_253'/>
+253
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_253'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_254'/>
+254
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_254'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  @Override CodeWriter emit(CodeWriter out) throws IOException {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_255'/>
+255
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_255'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    boolean charsEmitted = false;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_256'/>
+256
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_256'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    for (ClassName className : enclosingClasses()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_257'/>
+257
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_257'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      String simpleName;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_258'/>
+258
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_258'>1</a>
+<span>
+
+1. emit : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      if (charsEmitted) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_259'/>
+259
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_259'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        // We&#39;ve already emitted an enclosing class. Emit as we go.</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_260'/>
+260
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_260'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        out.emit(&#34;.&#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_261'/>
+261
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_261'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        simpleName = className.simpleName;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_262'/>
+262
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_262'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_263'/>
+263
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_263'>2</a>
+<span>
+
+1. emit : negated conditional &rarr; KILLED<br/>
+
+2. emit : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      } else if (className.isAnnotated() || className == this) {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_264'/>
+264
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_264'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        // We encountered the first enclosing class that must be emitted.</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_265'/>
+265
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_265'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        String qualifiedName = out.lookupName(className);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_266'/>
+266
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_266'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        int dot = qualifiedName.lastIndexOf(&#39;.&#39;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_267'/>
+267
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_267'>1</a>
+<span>
+
+1. emit : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (dot != -1) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_268'/>
+268
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_268'>1</a>
+<span>
+
+1. emit : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>          out.emitAndIndent(qualifiedName.substring(0, dot + 1));</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_269'/>
+269
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_269'>1</a>
+<span>
+
+1. emit : Replaced integer addition with subtraction &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>          simpleName = qualifiedName.substring(dot + 1);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_270'/>
+270
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_270'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>          charsEmitted = true;</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_271'/>
+271
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_271'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        } else {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_272'/>
+272
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_272'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>          simpleName = qualifiedName;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_273'/>
+273
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_273'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_274'/>
+274
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_274'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_275'/>
+275
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_275'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      } else {</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_276'/>
+276
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_276'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        // Don&#39;t emit this enclosing type. Keep going so we can be more precise.</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_277'/>
+277
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_277'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>        continue;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_278'/>
+278
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_278'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_279'/>
+279
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_279'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_280'/>
+280
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_280'>1</a>
+<span>
+
+1. emit : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>      if (className.isAnnotated()) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_281'/>
+281
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_281'>1</a>
+<span>
+
+1. emit : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>        if (charsEmitted) out.emit(&#34; &#34;);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_282'/>
+282
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_282'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>        className.emitAnnotations(out);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_283'/>
+283
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_283'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>      }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_284'/>
+284
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_284'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_285'/>
+285
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_285'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      out.emit(simpleName);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_286'/>
+286
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_286'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      charsEmitted = true;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_287'/>
+287
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_287'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_288'/>
+288
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_288'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_289'/>
+289
+</td>
+<td class='survived'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_289'>1</a>
+<span>
+
+1. emit : mutated return of Object value for com/squareup/javapoet/ClassName::emit to ( if (x != null) null else throw new RuntimeException ) &rarr; SURVIVED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='survived'>    return out;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_290'/>
+290
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_290'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_291'/>
+291
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_291'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''></span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_292'/>
+292
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_292'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  /** Returns all enclosing classes in this, outermost first. */</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_293'/>
+293
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_293'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  private List&#60;ClassName&#62; enclosingClasses() {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_294'/>
+294
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_294'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>    List&#60;ClassName&#62; result = new ArrayList&#60;&#62;();</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_295'/>
+295
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_295'>1</a>
+<span>
+
+1. enclosingClasses : negated conditional &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    for (ClassName c = this; c != null; c = c.enclosingClassName) {</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_296'/>
+296
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_296'></a>
+<span>
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class=''>      result.add(c);</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_297'/>
+297
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_297'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>    }</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_298'/>
+298
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_298'>1</a>
+<span>
+
+1. enclosingClasses : removed call to java/util/Collections::reverse &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    Collections.reverse(result);</span></pre></td></tr>
+
+
+<tr>
+<td class='covered'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_299'/>
+299
+</td>
+<td class='killed'>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_299'>1</a>
+<span>
+
+1. enclosingClasses : mutated return of Object value for com/squareup/javapoet/ClassName::enclosingClasses to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED<br/>
+
+</span>
+</span>
+</td>
+<td class='covered'><pre><span  class='killed'>    return result;</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_300'/>
+300
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_300'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>  }</span></pre></td></tr>
+
+
+<tr>
+<td class='na'>
+<a name='org.pitest.mutationtest.report.html.SourceFile@1811bc4f_301'/>
+301
+</td>
+<td class=''>
+<span class='pop'>
+<a href='#grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_301'></a>
+<span>
+</span>
+</span>
+</td>
+<td class=''><pre><span  class=''>}</span></pre></td></tr>
+
+
+
+<tr><td></td><td></td><td><h2>Mutations</h2></td></tr>
+
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_63'>63</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_63'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_65'>65</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_65'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b><init><br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_69'>69</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_69'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>annotated<br/><b>Killed by : </b>com.squareup.javapoet.AnnotatedTypeNameTest.withoutAnnotationsOnAnnotatedEnclosingType(com.squareup.javapoet.AnnotatedTypeNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::annotated to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_74'>74</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_74'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>withoutAnnotations<br/><b>Killed by : </b>com.squareup.javapoet.AnnotatedTypeNameTest.withoutAnnotationsOnAnnotatedEnclosingType(com.squareup.javapoet.AnnotatedTypeNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>withoutAnnotations<br/><b>Killed by : </b>com.squareup.javapoet.AnnotatedTypeNameTest.withoutAnnotationsOnAnnotatedNestedType(com.squareup.javapoet.AnnotatedTypeNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::withoutAnnotations to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_75'>75</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_75'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>withoutAnnotations<br/><b>Killed by : </b>com.squareup.javapoet.AnnotatedTypeNameTest.withoutAnnotationsOnAnnotatedEnclosingType(com.squareup.javapoet.AnnotatedTypeNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_78'>78</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_78'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>withoutAnnotations<br/><b>Killed by : </b>com.squareup.javapoet.AnnotatedTypeNameTest.withoutAnnotationsOnAnnotatedEnclosingType(com.squareup.javapoet.AnnotatedTypeNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::withoutAnnotations to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_82'>82</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_82'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>isAnnotated<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromClass(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>isAnnotated<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessForString_nestedClass(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>isAnnotated<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromClass(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>4.<span><b>4</b><br/><b>Location : </b>isAnnotated<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromClass(com.squareup.javapoet.ClassNameTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> <p class='KILLED'><span class='pop'>5.<span><b>5</b><br/><b>Location : </b>isAnnotated<br/><b>Killed by : </b>com.squareup.javapoet.AnnotatedTypeNameTest.withoutAnnotationsOnAnnotatedEnclosingType(com.squareup.javapoet.AnnotatedTypeNameTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_90'>90</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_90'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>packageName<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessNonAscii(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::packageName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_98'>98</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_98'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>enclosingClassName<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessForString_simpleClass(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::enclosingClassName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_106'>106</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_106'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>topLevelClassName<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessForString_simpleClass(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>topLevelClassName<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessForString_nestedClass(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::topLevelClassName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_111'>111</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_111'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reflectionName<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.reflectionName(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>reflectionName<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.reflectionName(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::reflectionName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_113'>113</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_113'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>reflectionName<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.reflectionName(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_117'>117</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_117'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>simpleNames<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessForString_defaultPackage(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_118'>118</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_118'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>simpleNames<br/><b>Killed by : </b>com.squareup.javapoet.FileWritingTest.filerClassesWithTabIndent(com.squareup.javapoet.FileWritingTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::simpleNames to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_121'>121</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_121'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>simpleNames<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessForString_defaultPackage(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_129'>129</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_129'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>simpleNames<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessForString_defaultPackage(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::simpleNames to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_138'>138</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_138'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>peerClass<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.peerClass(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::peerClass to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_146'>146</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_146'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>nestedClass<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::nestedClass to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_151'>151</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_151'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>simpleName<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessNonAscii(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::simpleName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_159'>159</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_159'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>canonicalName<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::canonicalName to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_164'>164</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_164'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.fromClassRejectionTypes(com.squareup.javapoet.ClassNameTest)</span></span> removed call to com/squareup/javapoet/Util::checkArgument &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_165'>165</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_165'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='SURVIVED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>get<br/><b>Killed by : </b>none</span></span> removed call to com/squareup/javapoet/Util::checkArgument &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_166'>166</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_166'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.fromClassRejectionTypes(com.squareup.javapoet.ClassNameTest)</span></span> removed call to com/squareup/javapoet/Util::checkArgument &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_169'>169</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_169'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_176'>176</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_176'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_179'>179</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_179'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_180'>180</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_180'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::get to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_183'>183</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_183'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::get to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_197'>197</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_197'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessForString_confusingInput(com.squareup.javapoet.ClassNameTest)</span></span> changed conditional boundary &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessNonAscii(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessNonAscii(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_198'>198</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_198'/> 
+
+<p class='TIMED_OUT'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>none</span></span> Replaced integer addition with subtraction &rarr; TIMED_OUT</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_199'>199</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_199'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessNonAscii(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='TIMED_OUT'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>none</span></span> removed call to com/squareup/javapoet/Util::checkArgument &rarr; TIMED_OUT</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_201'>201</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_201'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessNonAscii(com.squareup.javapoet.ClassNameTest)</span></span> Replaced integer subtraction with addition &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessNonAscii(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_206'>206</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_206'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessNonAscii(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessNonAscii(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>3.<span><b>3</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessForString_confusingInput(com.squareup.javapoet.ClassNameTest)</span></span> removed call to com/squareup/javapoet/Util::checkArgument &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_211'>211</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_211'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>bestGuess<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessNonAscii(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::bestGuess to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_223'>223</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_223'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::get to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_231'>231</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_231'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>get<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromTypeElement(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::get to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_233'>233</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_233'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>visitPackage<br/><b>Killed by : </b>com.squareup.javapoet.TypeSpecTest.typeFromTypeMirror(com.squareup.javapoet.TypeSpecTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName$1::visitPackage to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_237'>237</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_237'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>visitType<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromTypeElement(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName$1::visitType to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_241'>241</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_241'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>visitUnknown<br/><b>Killed by : </b>com.squareup.javapoet.TypesTest.errorTypes(com.squareup.javapoet.TypesTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName$1::visitUnknown to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_251'>251</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_251'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>compareTo<br/><b>Killed by : </b>com.squareup.javapoet.FileWritingTest.filerClassesWithTabIndent(com.squareup.javapoet.FileWritingTest)</span></span> replaced return of integer sized value with (x == 0 ? 1 : 0) &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_258'>258</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_258'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>emit<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromClass(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_263'>263</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_263'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>emit<br/><b>Killed by : </b>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedEnclosingAndNestedType(com.squareup.javapoet.AnnotatedTypeNameTest)</span></span> negated conditional &rarr; KILLED</p> <p class='KILLED'><span class='pop'>2.<span><b>2</b><br/><b>Location : </b>emit<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromClass(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_267'>267</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_267'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>emit<br/><b>Killed by : </b>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedArrayElementType(com.squareup.javapoet.AnnotatedTypeNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_268'>268</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_268'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>emit<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromClass(com.squareup.javapoet.ClassNameTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_269'>269</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_269'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>emit<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromClass(com.squareup.javapoet.ClassNameTest)</span></span> Replaced integer addition with subtraction &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_280'>280</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_280'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>emit<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromClass(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_281'>281</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_281'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>emit<br/><b>Killed by : </b>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedArrayElementType(com.squareup.javapoet.AnnotatedTypeNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_289'>289</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_289'/> 
+
+<p class='SURVIVED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>emit<br/><b>Killed by : </b>none</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::emit to ( if (x != null) null else throw new RuntimeException ) &rarr; SURVIVED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_295'>295</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_295'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>enclosingClasses<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromClass(com.squareup.javapoet.ClassNameTest)</span></span> negated conditional &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_298'>298</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_298'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>enclosingClasses<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.classNameFromClass(com.squareup.javapoet.ClassNameTest)</span></span> removed call to java/util/Collections::reverse &rarr; KILLED</p> 
+</td>
+</tr>
+
+<tr>
+<td><a href='#org.pitest.mutationtest.report.html.SourceFile@1811bc4f_299'>299</a></td> 
+<td></td>
+<td>
+
+<a name='grouporg.pitest.mutationtest.report.html.SourceFile@1811bc4f_299'/> 
+
+<p class='KILLED'><span class='pop'>1.<span><b>1</b><br/><b>Location : </b>enclosingClasses<br/><b>Killed by : </b>com.squareup.javapoet.ClassNameTest.bestGuessForString_nestedClass(com.squareup.javapoet.ClassNameTest)</span></span> mutated return of Object value for com/squareup/javapoet/ClassName::enclosingClasses to ( if (x != null) null else throw new RuntimeException ) &rarr; KILLED</p> 
+</td>
+</tr>
+
+</table>
+
+
+<h2>Active mutators</h2>
+<ul>
+
+<li class='mutator'>INCREMENTS_MUTATOR</li>
+
+<li class='mutator'>VOID_METHOD_CALL_MUTATOR</li>
+
+<li class='mutator'>RETURN_VALS_MUTATOR</li>
+
+<li class='mutator'>MATH_MUTATOR</li>
+
+<li class='mutator'>NEGATE_CONDITIONALS_MUTATOR</li>
+
+<li class='mutator'>INVERT_NEGS_MUTATOR</li>
+
+<li class='mutator'>CONDITIONALS_BOUNDARY_MUTATOR</li>
+
+</ul>
+
+<h2>Tests examined</h2>
+<ul>
+<li>com.squareup.javapoet.JavaFileTest.skipJavaLangImportsWithConflictingClassFirst(com.squareup.javapoet.JavaFileTest) (29 ms)</li><li>com.squareup.javapoet.TypesTest.getBasicTypeMirror(com.squareup.javapoet.TypesTest) (50 ms)</li><li>com.squareup.javapoet.JavaFileTest.nestedClassAndSuperclassShareName(com.squareup.javapoet.JavaFileTest) (29 ms)</li><li>com.squareup.javapoet.ClassNameTest.bestGuessForString_simpleClass(com.squareup.javapoet.ClassNameTest) (29 ms)</li><li>com.squareup.javapoet.JavaFileTest.avoidClashes_parentChild_superclass_typeMirror(com.squareup.javapoet.JavaFileTest) (35 ms)</li><li>com.squareup.javapoet.TypeSpecTest.interfaceExtends(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.MethodSpecTest.overrideExtendsOthersWorksWithActualTypeParameters(com.squareup.javapoet.MethodSpecTest) (35 ms)</li><li>com.squareup.javapoet.TypesTest.getTypeVariableTypeMirror(com.squareup.javapoet.TypesTest) (31 ms)</li><li>com.squareup.javapoet.TypeSpecTest.codeBlockToString(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.AnnotationSpecTest.defaultAnnotation(com.squareup.javapoet.AnnotationSpecTest) (349 ms)</li><li>com.squareup.javapoet.TypeSpecTest.nativeMethods(com.squareup.javapoet.TypeSpecTest) (77 ms)</li><li>com.squareup.javapoet.AnnotationSpecTest.requiresValidMemberName(com.squareup.javapoet.AnnotationSpecTest) (30 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.nullAnnotationList(com.squareup.javapoet.AnnotatedTypeNameTest) (1 ms)</li><li>com.squareup.javapoet.AnnotationSpecTest.defaultAnnotationToBuilder(com.squareup.javapoet.AnnotationSpecTest) (46 ms)</li><li>com.squareup.javapoet.JavaFileTest.singleImport(com.squareup.javapoet.JavaFileTest) (28 ms)</li><li>com.squareup.javapoet.TypeSpecTest.doubleFieldInitialization(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.getTypeVariableTypeMirror(com.squareup.javapoet.TypesEclipseTest) (174 ms)</li><li>com.squareup.javapoet.TypeNameTest.isPrimitive(com.squareup.javapoet.TypeNameTest) (1 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedNestedParameterizedType(com.squareup.javapoet.AnnotatedTypeNameTest) (1 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedOuterMultidimensionalArrayType(com.squareup.javapoet.AnnotatedTypeNameTest) (0 ms)</li><li>com.squareup.javapoet.JavaFileTest.avoidClashes_mapEntry(com.squareup.javapoet.JavaFileTest) (31 ms)</li><li>com.squareup.javapoet.TypeSpecTest.parameterToString(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedEnclosingAndNestedType(com.squareup.javapoet.AnnotatedTypeNameTest) (0 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.getArrayTypeMirror(com.squareup.javapoet.TypesEclipseTest) (172 ms)</li><li>com.squareup.javapoet.TypesTest.wildcardSuperType(com.squareup.javapoet.TypesTest) (28 ms)</li><li>com.squareup.javapoet.TypeSpecTest.intersectionType(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.codeBlocks(com.squareup.javapoet.TypeSpecTest) (28 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.unbox(com.squareup.javapoet.TypesEclipseTest) (175 ms)</li><li>com.squareup.javapoet.TypeSpecTest.typeFromTypeName(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.ClassNameTest.bestGuessForString_nestedClass(com.squareup.javapoet.ClassNameTest) (27 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedArrayTypeInVarargsParameter(com.squareup.javapoet.AnnotatedTypeNameTest) (2 ms)</li><li>com.squareup.javapoet.MethodSpecTest.overrideEverything(com.squareup.javapoet.MethodSpecTest) (40 ms)</li><li>com.squareup.javapoet.TypeSpecTest.tryCatch(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.JavaFileTest.modifyStaticImports(com.squareup.javapoet.JavaFileTest) (29 ms)</li><li>com.squareup.javapoet.AnnotationSpecTest.equalsAndHashCode(com.squareup.javapoet.AnnotationSpecTest) (37 ms)</li><li>com.squareup.javapoet.ClassNameTest.classNameFromTypeElementDoesntUseGetKind(com.squareup.javapoet.ClassNameTest) (541 ms)</li><li>com.squareup.javapoet.TypeSpecTest.annotatedParameters(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeNameTest.innerStaticInGenericType(com.squareup.javapoet.TypeNameTest) (0 ms)</li><li>com.squareup.javapoet.TypesTest.getArrayTypeMirror(com.squareup.javapoet.TypesTest) (29 ms)</li><li>com.squareup.javapoet.JavaFileTest.importStaticReadmeExample(com.squareup.javapoet.JavaFileTest) (29 ms)</li><li>com.squareup.javapoet.ClassNameTest.bestGuessForString_confusingInput(com.squareup.javapoet.ClassNameTest) (48 ms)</li><li>com.squareup.javapoet.TypesTest.wildcardExtendsType(com.squareup.javapoet.TypesTest) (28 ms)</li><li>com.squareup.javapoet.CodeBlockTest.join(com.squareup.javapoet.CodeBlockTest) (2 ms)</li><li>com.squareup.javapoet.MethodSpecTest.overrideGenerics(com.squareup.javapoet.MethodSpecTest) (33 ms)</li><li>com.squareup.javapoet.TypeSpecTest.enumImplements(com.squareup.javapoet.TypeSpecTest) (29 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.wildcardSuperType(com.squareup.javapoet.TypesEclipseTest) (171 ms)</li><li>com.squareup.javapoet.AnnotationSpecTest.modifyMembers(com.squareup.javapoet.AnnotationSpecTest) (33 ms)</li><li>com.squareup.javapoet.JavaFileTest.importStaticOnce(com.squareup.javapoet.JavaFileTest) (28 ms)</li><li>com.squareup.javapoet.JavaFileTest.annotationIsNestedClass(com.squareup.javapoet.JavaFileTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.superClassOnlyValidForClasses(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.classNameFactories(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.membersOrdering(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.typeVariable(com.squareup.javapoet.TypesEclipseTest) (172 ms)</li><li>com.squareup.javapoet.ClassNameTest.classNameFromTypeElement(com.squareup.javapoet.ClassNameTest) (37 ms)</li><li>com.squareup.javapoet.TypeSpecTest.methodToString(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.JavaFileTest.avoidClashes_parentChild_superinterface_type(com.squareup.javapoet.JavaFileTest) (29 ms)</li><li>com.squareup.javapoet.TypeSpecTest.initializersToBuilder(com.squareup.javapoet.TypeSpecTest) (32 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedArgumentOfParameterizedType(com.squareup.javapoet.AnnotatedTypeNameTest) (9 ms)</li><li>com.squareup.javapoet.TypesTest.getParameterizedTypeMirror(com.squareup.javapoet.TypesTest) (29 ms)</li><li>com.squareup.javapoet.ClassNameTest.classNameFromClass(com.squareup.javapoet.ClassNameTest) (30 ms)</li><li>com.squareup.javapoet.JavaFileTest.avoidClashesWithNestedClasses_viaSuperinterfaceType(com.squareup.javapoet.JavaFileTest) (31 ms)</li><li>com.squareup.javapoet.TypeSpecTest.annotationsAndJavaLangTypes(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.annotatedClass(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.interestingTypes(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.ClassNameTest.createNestedClass(com.squareup.javapoet.ClassNameTest) (33 ms)</li><li>com.squareup.javapoet.JavaFileTest.importStaticTwice(com.squareup.javapoet.JavaFileTest) (27 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedArrayTypeVarargsParameter(com.squareup.javapoet.AnnotatedTypeNameTest) (0 ms)</li><li>com.squareup.javapoet.JavaFileTest.importStaticNone(com.squareup.javapoet.JavaFileTest) (27 ms)</li><li>com.squareup.javapoet.JavaFileTest.defaultPackage(com.squareup.javapoet.JavaFileTest) (28 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedArrayType(com.squareup.javapoet.AnnotatedTypeNameTest) (1 ms)</li><li>com.squareup.javapoet.TypesTest.box(com.squareup.javapoet.TypesTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.typeFromTypeMirror(com.squareup.javapoet.TypeSpecTest) (25 ms)</li><li>com.squareup.javapoet.MethodSpecTest.equalsAndHashCode(com.squareup.javapoet.MethodSpecTest) (39 ms)</li><li>com.squareup.javapoet.TypeNameTest.equalsAndHashCodeParameterizedTypeName(com.squareup.javapoet.TypeNameTest) (0 ms)</li><li>com.squareup.javapoet.ParameterSpecTest.modifyAnnotations(com.squareup.javapoet.ParameterSpecTest) (29 ms)</li><li>com.squareup.javapoet.MethodSpecTest.overrideDoesNotCopyParameterAnnotations(com.squareup.javapoet.MethodSpecTest) (70 ms)</li><li>com.squareup.javapoet.TypeSpecTest.innerAnnotationInAnnotationDeclaration(com.squareup.javapoet.TypeSpecTest) (28 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.wildcardMirrorSuperType(com.squareup.javapoet.TypesEclipseTest) (140 ms)</li><li>com.squareup.javapoet.TypeSpecTest.typeVariables(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.basic(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.wildcardMirrorNoBounds(com.squareup.javapoet.TypesEclipseTest) (154 ms)</li><li>com.squareup.javapoet.JavaFileTest.conflictingTypeVariableBound(com.squareup.javapoet.JavaFileTest) (31 ms)</li><li>com.squareup.javapoet.TypeSpecTest.nameFromMethod(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.simpleNameConflictsWithTypeVariable(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.anonymousInnerClass(com.squareup.javapoet.TypeSpecTest) (28 ms)</li><li>com.squareup.javapoet.TypeSpecTest.nameFromParameter(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.ClassNameTest.reflectionName(com.squareup.javapoet.ClassNameTest) (30 ms)</li><li>com.squareup.javapoet.ClassNameTest.peerClass(com.squareup.javapoet.ClassNameTest) (31 ms)</li><li>com.squareup.javapoet.TypeSpecTest.constructorToString(com.squareup.javapoet.TypeSpecTest) (30 ms)</li><li>com.squareup.javapoet.JavaFileTest.packageClassConflictsWithNestedClass(com.squareup.javapoet.JavaFileTest) (29 ms)</li><li>com.squareup.javapoet.TypeSpecTest.classImplementsNestedClass(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.retrofitStyleInterface(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypesTest.unbox(com.squareup.javapoet.TypesTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.nullInSuperinterfaceIterableAddition(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.lineWrapping(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.multilineStatementWithAnonymousClass(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeNameTest.equalsAndHashCodeWildcardTypeName(com.squareup.javapoet.TypeNameTest) (0 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedParameterizedType(com.squareup.javapoet.AnnotatedTypeNameTest) (1 ms)</li><li>com.squareup.javapoet.ClassNameTest.fromClassRejectionTypes(com.squareup.javapoet.ClassNameTest) (32 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.wildcardExtendsObject(com.squareup.javapoet.TypesEclipseTest) (173 ms)</li><li>com.squareup.javapoet.CodeBlockTest.joiningWithPrefixAndSuffix(com.squareup.javapoet.CodeBlockTest) (1 ms)</li><li>com.squareup.javapoet.JavaFileTest.avoidClashesWithNestedClasses_viaTypeElement(com.squareup.javapoet.JavaFileTest) (43 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedWildcardTypeNameWithSuper(com.squareup.javapoet.AnnotatedTypeNameTest) (0 ms)</li><li>com.squareup.javapoet.TypesTest.wildcardMirrorSuperType(com.squareup.javapoet.TypesTest) (30 ms)</li><li>com.squareup.javapoet.TypesTest.parameterizedType(com.squareup.javapoet.TypesTest) (28 ms)</li><li>com.squareup.javapoet.TypesTest.getTypeVariableTypeMirrorRecursive(com.squareup.javapoet.TypesTest) (34 ms)</li><li>com.squareup.javapoet.TypeSpecTest.multilineStrings(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.AnnotationSpecTest.dynamicArrayOfEnumConstants(com.squareup.javapoet.AnnotationSpecTest) (38 ms)</li><li>com.squareup.javapoet.TypeNameTest.genericType(com.squareup.javapoet.TypeNameTest) (0 ms)</li><li>com.squareup.javapoet.JavaFileTest.skipJavaLangImportsWithConflictingClassLast(com.squareup.javapoet.JavaFileTest) (71 ms)</li><li>com.squareup.javapoet.TypeSpecTest.nameFromField(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.JavaFileTest.avoidClashesWithNestedClasses_viaClass(com.squareup.javapoet.JavaFileTest) (31 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedType(com.squareup.javapoet.AnnotatedTypeNameTest) (0 ms)</li><li>com.squareup.javapoet.TypeSpecTest.codeBlockAddStatementOfCodeBlockToString(com.squareup.javapoet.TypeSpecTest) (28 ms)</li><li>com.squareup.javapoet.ClassNameTest.bestGuessForString_defaultPackage(com.squareup.javapoet.ClassNameTest) (30 ms)</li><li>com.squareup.javapoet.ClassNameTest.canonicalName(com.squareup.javapoet.ClassNameTest) (30 ms)</li><li>com.squareup.javapoet.FieldSpecTest.modifyAnnotations(com.squareup.javapoet.FieldSpecTest) (2 ms)</li><li>com.squareup.javapoet.TypeSpecTest.typeFromReflectType(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.multipleTypeVariableAddition(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.JavaFileTest.conflictingAnnotation(com.squareup.javapoet.JavaFileTest) (28 ms)</li><li>com.squareup.javapoet.MethodSpecTest.duplicateExceptionsIgnored(com.squareup.javapoet.MethodSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.fieldToString(com.squareup.javapoet.TypeSpecTest) (28 ms)</li><li>com.squareup.javapoet.JavaFileTest.alwaysQualifySupersedesJavaLangImports(com.squareup.javapoet.JavaFileTest) (30 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedInnerMultidimensionalArrayType(com.squareup.javapoet.AnnotatedTypeNameTest) (0 ms)</li><li>com.squareup.javapoet.TypeSpecTest.typeVariableWithBounds(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.CodeBlockTest.namedNewline(com.squareup.javapoet.CodeBlockTest) (1 ms)</li><li>com.squareup.javapoet.JavaFileTest.avoidClashes_parentChild_superinterface_typeMirror(com.squareup.javapoet.JavaFileTest) (36 ms)</li><li>com.squareup.javapoet.JavaFileTest.defaultPackageTypesAreNotImported(com.squareup.javapoet.JavaFileTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.enumWithMembersButNoConstructorCall(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.arrayType(com.squareup.javapoet.TypesEclipseTest) (410 ms)</li><li>com.squareup.javapoet.TypeSpecTest.typeFromTypeElement(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.anonymousClassToString(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.AnnotationSpecTest.defaultAnnotationWithImport(com.squareup.javapoet.AnnotationSpecTest) (60 ms)</li><li>com.squareup.javapoet.TypeSpecTest.invalidSuperClass(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedWildcardTypeNameWithExtends(com.squareup.javapoet.AnnotatedTypeNameTest) (1 ms)</li><li>com.squareup.javapoet.ClassNameTest.bestGuessNonAscii(com.squareup.javapoet.ClassNameTest) (33 ms)</li><li>com.squareup.javapoet.MethodSpecTest.modifyAnnotations(com.squareup.javapoet.MethodSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.getParameterizedTypeMirror(com.squareup.javapoet.TypesEclipseTest) (171 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.nullAnnotationArray(com.squareup.javapoet.AnnotatedTypeNameTest) (1 ms)</li><li>com.squareup.javapoet.TypeNameTest.isBoxedPrimitive(com.squareup.javapoet.TypeNameTest) (0 ms)</li><li>com.squareup.javapoet.TypeNameTest.equalsAndHashCodeArrayTypeName(com.squareup.javapoet.TypeNameTest) (0 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedArrayElementType(com.squareup.javapoet.AnnotatedTypeNameTest) (0 ms)</li><li>com.squareup.javapoet.TypesTest.wildcardMirrorExtendsType(com.squareup.javapoet.TypesTest) (25 ms)</li><li>com.squareup.javapoet.JavaFileTest.conflictingImports(com.squareup.javapoet.JavaFileTest) (28 ms)</li><li>com.squareup.javapoet.TypeSpecTest.enumWithSubclassing(com.squareup.javapoet.TypeSpecTest) (28 ms)</li><li>com.squareup.javapoet.TypeSpecTest.referencedAndDeclaredSimpleNamesConflict(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.JavaFileTest.importStaticUsingWildcards(com.squareup.javapoet.JavaFileTest) (28 ms)</li><li>com.squareup.javapoet.TypesTest.arrayType(com.squareup.javapoet.TypesTest) (33 ms)</li><li>com.squareup.javapoet.JavaFileTest.importStaticForCrazyFormatsWorks(com.squareup.javapoet.JavaFileTest) (28 ms)</li><li>com.squareup.javapoet.TypeSpecTest.staticCodeBlock(com.squareup.javapoet.TypeSpecTest) (28 ms)</li><li>com.squareup.javapoet.TypeSpecTest.modifySuperinterfaces(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeNameTest.equalsAndHashCodeTypeVariableName(com.squareup.javapoet.TypeNameTest) (1 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.box(com.squareup.javapoet.TypesEclipseTest) (159 ms)</li><li>com.squareup.javapoet.JavaFileTest.classAndSuperclassShareName(com.squareup.javapoet.JavaFileTest) (27 ms)</li><li>com.squareup.javapoet.ParameterSpecTest.parameterVariableElement(com.squareup.javapoet.ParameterSpecTest) (31 ms)</li><li>com.squareup.javapoet.TypeSpecTest.doWhile(com.squareup.javapoet.TypeSpecTest) (28 ms)</li><li>com.squareup.javapoet.MethodSpecTest.overrideDoesNotCopyOverrideAnnotation(com.squareup.javapoet.MethodSpecTest) (32 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedTwice(com.squareup.javapoet.AnnotatedTypeNameTest) (0 ms)</li><li>com.squareup.javapoet.TypeNameTest.innerGenericInGenericType(com.squareup.javapoet.TypeNameTest) (0 ms)</li><li>com.squareup.javapoet.CodeBlockTest.typeFormatCanBeIndexed(com.squareup.javapoet.CodeBlockTest) (1 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedNestedType(com.squareup.javapoet.AnnotatedTypeNameTest) (0 ms)</li><li>com.squareup.javapoet.JavaFileTest.alwaysQualifySimple(com.squareup.javapoet.JavaFileTest) (68 ms)</li><li>com.squareup.javapoet.TypesTest.errorTypes(com.squareup.javapoet.TypesTest) (56 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.wildcardMirrorExtendsType(com.squareup.javapoet.TypesEclipseTest) (189 ms)</li><li>com.squareup.javapoet.MethodSpecTest.overrideDoesNotCopyDefaultModifier(com.squareup.javapoet.MethodSpecTest) (33 ms)</li><li>com.squareup.javapoet.TypeSpecTest.defaultModifiersForInterfaceMembers(com.squareup.javapoet.TypeSpecTest) (33 ms)</li><li>com.squareup.javapoet.TypeSpecTest.nestedClasses(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.errorTypes(com.squareup.javapoet.TypesEclipseTest) (219 ms)</li><li>com.squareup.javapoet.TypeSpecTest.multipleAnnotationAddition(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.AnnotationSpecTest.reflectAnnotationWithDefaults(com.squareup.javapoet.AnnotationSpecTest) (32 ms)</li><li>com.squareup.javapoet.TypeSpecTest.initializerBlockInRightPlace(com.squareup.javapoet.TypeSpecTest) (28 ms)</li><li>com.squareup.javapoet.JavaFileTest.conflictingAnnotationReferencedClass(com.squareup.javapoet.JavaFileTest) (29 ms)</li><li>com.squareup.javapoet.TypeSpecTest.multilineStatement(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.JavaFileTest.avoidClashes_parentChild_superclass_type(com.squareup.javapoet.JavaFileTest) (53 ms)</li><li>com.squareup.javapoet.CodeBlockTest.joining(com.squareup.javapoet.CodeBlockTest) (0 ms)</li><li>com.squareup.javapoet.TypeSpecTest.multipleFieldAddition(com.squareup.javapoet.TypeSpecTest) (28 ms)</li><li>com.squareup.javapoet.AnnotationSpecTest.emptyArray(com.squareup.javapoet.AnnotationSpecTest) (47 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.withoutAnnotationsOnAnnotatedEnclosingAndNestedType(com.squareup.javapoet.AnnotatedTypeNameTest) (2 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotatedEquivalence(com.squareup.javapoet.AnnotatedTypeNameTest) (4 ms)</li><li>com.squareup.javapoet.TypeSpecTest.addAnnotationDisallowsNull(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.AnnotationSpecTest.reflectAnnotation(com.squareup.javapoet.AnnotationSpecTest) (35 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.withoutAnnotationsOnAnnotatedNestedType(com.squareup.javapoet.AnnotatedTypeNameTest) (0 ms)</li><li>com.squareup.javapoet.TypeSpecTest.annotationsInAnnotations(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.JavaFileTest.conflictingNameOutOfScope(com.squareup.javapoet.JavaFileTest) (32 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.wildcardExtendsType(com.squareup.javapoet.TypesEclipseTest) (158 ms)</li><li>com.squareup.javapoet.TypeSpecTest.nullStringLiteral(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.inlineIndent(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypesTest.wildcardExtendsObject(com.squareup.javapoet.TypesTest) (25 ms)</li><li>com.squareup.javapoet.TypeSpecTest.methodThrows(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.simpleNamesConflictInThisAndOtherPackage(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.elseIf(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypesTest.typeVariable(com.squareup.javapoet.TypesTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.classImplementsExtends(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.JavaFileTest.annotatedTypeParam(com.squareup.javapoet.JavaFileTest) (28 ms)</li><li>com.squareup.javapoet.TypeNameTest.equalsAndHashCodeClassName(com.squareup.javapoet.TypeNameTest) (0 ms)</li><li>com.squareup.javapoet.JavaFileTest.packageClassConflictsWithSuperlass(com.squareup.javapoet.JavaFileTest) (30 ms)</li><li>com.squareup.javapoet.TypeSpecTest.enumsMayDefineAbstractMethods(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.FileReadingTest.compileJavaFile(com.squareup.javapoet.FileReadingTest) (254 ms)</li><li>com.squareup.javapoet.TypeSpecTest.varargs(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.CodeBlockTest.sameIndexCanBeUsedWithDifferentFormats(com.squareup.javapoet.CodeBlockTest) (0 ms)</li><li>com.squareup.javapoet.JavaFileTest.conflictingChildName(com.squareup.javapoet.JavaFileTest) (29 ms)</li><li>com.squareup.javapoet.FileWritingTest.filerClassesWithTabIndent(com.squareup.javapoet.FileWritingTest) (4 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.withoutAnnotationsOnAnnotatedEnclosingType(com.squareup.javapoet.AnnotatedTypeNameTest) (0 ms)</li><li>com.squareup.javapoet.TypeSpecTest.annotationToString(com.squareup.javapoet.TypeSpecTest) (28 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.getBasicTypeMirror(com.squareup.javapoet.TypesEclipseTest) (189 ms)</li><li>com.squareup.javapoet.CodeBlockTest.danglingNamed(com.squareup.javapoet.CodeBlockTest) (1 ms)</li><li>com.squareup.javapoet.JavaFileTest.conflictingParentName(com.squareup.javapoet.JavaFileTest) (31 ms)</li><li>com.squareup.javapoet.AnnotatedTypeNameTest.annotated(com.squareup.javapoet.AnnotatedTypeNameTest) (14 ms)</li><li>com.squareup.javapoet.TypesTest.wildcardMirrorNoBounds(com.squareup.javapoet.TypesTest) (27 ms)</li><li>com.squareup.javapoet.CodeBlockTest.multipleNamedArguments(com.squareup.javapoet.CodeBlockTest) (0 ms)</li><li>com.squareup.javapoet.JavaFileTest.superclassReferencesSelf(com.squareup.javapoet.JavaFileTest) (31 ms)</li><li>com.squareup.javapoet.TypeNameTest.innerClassInGenericType(com.squareup.javapoet.TypeNameTest) (1 ms)</li><li>com.squareup.javapoet.TypeSpecTest.enumWithAnnotatedValues(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.annotatedField(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.AnnotationSpecTest.disallowsNullMemberName(com.squareup.javapoet.AnnotationSpecTest) (40 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.parameterizedType(com.squareup.javapoet.TypesEclipseTest) (175 ms)</li><li>com.squareup.javapoet.TypeSpecTest.indexedElseIf(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypeSpecTest.multipleSuperinterfaceAddition(com.squareup.javapoet.TypeSpecTest) (27 ms)</li><li>com.squareup.javapoet.TypeSpecTest.modifyAnnotations(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.JavaFileTest.importStaticMixed(com.squareup.javapoet.JavaFileTest) (28 ms)</li><li>com.squareup.javapoet.TypeSpecTest.javadoc(com.squareup.javapoet.TypeSpecTest) (26 ms)</li><li>com.squareup.javapoet.TypesEclipseTest.getTypeVariableTypeMirrorRecursive(com.squareup.javapoet.TypesEclipseTest) (143 ms)</li>
+</ul>
+
+<br/>
+
+Report generated by <a href='http://pitest.org'>PIT</a> 1.4.3
+
+</body>
+</html>

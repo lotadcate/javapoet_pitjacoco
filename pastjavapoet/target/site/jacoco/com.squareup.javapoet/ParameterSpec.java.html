@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ja"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ParameterSpec.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">JavaPoet</a> &gt; <a href="index.source.html" class="el_package">com.squareup.javapoet</a> &gt; <span class="el_source">ParameterSpec.java</span></div><h1>ParameterSpec.java</h1><pre class="source lang-java linenums">/*
+ * Copyright (C) 2015 Square, Inc.
+ *
+ * Licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+ * See the License for the specific language governing permissions and
+ * limitations under the License.
+ */
+package com.squareup.javapoet;
+
+import java.io.IOException;
+import java.io.StringWriter;
+import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+import java.util.Set;
+import javax.lang.model.SourceVersion;
+import javax.lang.model.element.Modifier;
+
+import static com.squareup.javapoet.Util.checkArgument;
+import static com.squareup.javapoet.Util.checkNotNull;
+
+/** A generated parameter declaration. */
+public final class ParameterSpec {
+  public final String name;
+  public final List&lt;AnnotationSpec&gt; annotations;
+  public final Set&lt;Modifier&gt; modifiers;
+  public final TypeName type;
+
+<span class="fc" id="L38">  private ParameterSpec(Builder builder) {</span>
+<span class="fc" id="L39">    this.name = checkNotNull(builder.name, &quot;name == null&quot;);</span>
+<span class="fc" id="L40">    this.annotations = Util.immutableList(builder.annotations);</span>
+<span class="fc" id="L41">    this.modifiers = Util.immutableSet(builder.modifiers);</span>
+<span class="fc" id="L42">    this.type = checkNotNull(builder.type, &quot;type == null&quot;);</span>
+<span class="fc" id="L43">  }</span>
+
+  public boolean hasModifier(Modifier modifier) {
+<span class="nc" id="L46">    return modifiers.contains(modifier);</span>
+  }
+
+  void emit(CodeWriter codeWriter, boolean varargs) throws IOException {
+<span class="fc" id="L50">    codeWriter.emitAnnotations(annotations, true);</span>
+<span class="fc" id="L51">    codeWriter.emitModifiers(modifiers);</span>
+<span class="fc bfc" id="L52" title="All 2 branches covered.">    if (varargs) {</span>
+<span class="fc" id="L53">      codeWriter.emit(&quot;$T... $L&quot;, TypeName.arrayComponent(type), name);</span>
+    } else {
+<span class="fc" id="L55">      codeWriter.emit(&quot;$T $L&quot;, type, name);</span>
+    }
+<span class="fc" id="L57">  }</span>
+
+  @Override public boolean equals(Object o) {
+<span class="pc bpc" id="L60" title="1 of 2 branches missed.">    if (this == o) return true;</span>
+<span class="pc bpc" id="L61" title="1 of 2 branches missed.">    if (o == null) return false;</span>
+<span class="pc bpc" id="L62" title="1 of 2 branches missed.">    if (getClass() != o.getClass()) return false;</span>
+<span class="fc" id="L63">    return toString().equals(o.toString());</span>
+  }
+
+  @Override public int hashCode() {
+<span class="fc" id="L67">    return toString().hashCode();</span>
+  }
+
+  @Override public String toString() {
+<span class="fc" id="L71">    StringWriter out = new StringWriter();</span>
+    try {
+<span class="fc" id="L73">      CodeWriter codeWriter = new CodeWriter(out);</span>
+<span class="fc" id="L74">      emit(codeWriter, false);</span>
+<span class="fc" id="L75">      return out.toString();</span>
+<span class="nc" id="L76">    } catch (IOException e) {</span>
+<span class="nc" id="L77">      throw new AssertionError();</span>
+    }
+  }
+
+  public static Builder builder(TypeName type, String name, Modifier... modifiers) {
+<span class="fc" id="L82">    checkNotNull(type, &quot;type == null&quot;);</span>
+<span class="fc" id="L83">    checkArgument(SourceVersion.isName(name), &quot;not a valid name: %s&quot;, name);</span>
+<span class="fc" id="L84">    return new Builder(type, name)</span>
+<span class="fc" id="L85">        .addModifiers(modifiers);</span>
+  }
+
+  public static Builder builder(Type type, String name, Modifier... modifiers) {
+<span class="fc" id="L89">    return builder(TypeName.get(type), name, modifiers);</span>
+  }
+
+  public Builder toBuilder() {
+<span class="nc" id="L93">    return toBuilder(type, name);</span>
+  }
+
+  Builder toBuilder(TypeName type, String name) {
+<span class="fc" id="L97">    Builder builder = new Builder(type, name);</span>
+<span class="fc" id="L98">    builder.annotations.addAll(annotations);</span>
+<span class="fc" id="L99">    builder.modifiers.addAll(modifiers);</span>
+<span class="fc" id="L100">    return builder;</span>
+  }
+
+  public static final class Builder {
+    private final TypeName type;
+    private final String name;
+
+<span class="fc" id="L107">    private final List&lt;AnnotationSpec&gt; annotations = new ArrayList&lt;&gt;();</span>
+<span class="fc" id="L108">    private final List&lt;Modifier&gt; modifiers = new ArrayList&lt;&gt;();</span>
+
+<span class="fc" id="L110">    private Builder(TypeName type, String name) {</span>
+<span class="fc" id="L111">      this.type = type;</span>
+<span class="fc" id="L112">      this.name = name;</span>
+<span class="fc" id="L113">    }</span>
+
+    public Builder addAnnotations(Iterable&lt;AnnotationSpec&gt; annotationSpecs) {
+<span class="pc bpc" id="L116" title="1 of 2 branches missed.">      checkArgument(annotationSpecs != null, &quot;annotationSpecs == null&quot;);</span>
+<span class="nc bnc" id="L117" title="All 2 branches missed.">      for (AnnotationSpec annotationSpec : annotationSpecs) {</span>
+<span class="nc" id="L118">        this.annotations.add(annotationSpec);</span>
+<span class="nc" id="L119">      }</span>
+<span class="nc" id="L120">      return this;</span>
+    }
+
+    public Builder addAnnotation(AnnotationSpec annotationSpec) {
+<span class="fc" id="L124">      this.annotations.add(annotationSpec);</span>
+<span class="fc" id="L125">      return this;</span>
+    }
+
+    public Builder addAnnotation(ClassName annotation) {
+<span class="fc" id="L129">      this.annotations.add(AnnotationSpec.builder(annotation).build());</span>
+<span class="fc" id="L130">      return this;</span>
+    }
+
+    public Builder addAnnotation(Class&lt;?&gt; annotation) {
+<span class="nc" id="L134">      return addAnnotation(ClassName.get(annotation));</span>
+    }
+
+    public Builder addModifiers(Modifier... modifiers) {
+<span class="fc" id="L138">      Collections.addAll(this.modifiers, modifiers);</span>
+<span class="fc" id="L139">      return this;</span>
+    }
+
+    public ParameterSpec build() {
+<span class="fc" id="L143">      return new ParameterSpec(this);</span>
+    }
+  }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
